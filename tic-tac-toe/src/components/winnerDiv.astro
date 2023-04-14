@@ -1,0 +1,29 @@
+---
+
+const {passedString}= Astro.params
+const stringToDisplay = passedString.toUpperCase + "WINS!!!"
+import "../styles/global.css"
+---
+
+<style>
+    
+.pobjednicki {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 80%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(18, 18, 18, 0.3);
+    border-radius: 25px;
+}
+
+</style>
+
+<div class="pobjednicki">
+    <h1>{stringToDisplay}</h1>
+</div>

@@ -1,0 +1,60 @@
+---
+import GameField from "../components/GameField.astro";
+
+---
+
+<style>
+    
+    
+#game {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr) ;
+    gap: 5px;
+    width: fit-content;
+    background: #121212;
+    border-radius: 30px;
+    padding: 5px;
+    animation-name: levitate;
+    animation-duration: var(--levSpeed);
+    animation-iteration-count: infinite;
+    margin-top: 80px ;
+    margin-bottom: 50px;
+}
+
+@keyframes levitate {
+    0%   {transform: translateY(0)}
+    50%  {transform: translateY(10px)}
+    100% {transform: translateY(0)}
+}
+
+@keyframes shade {
+    0%   {transform: translate(-55%, 0px); scale: 0.9}
+    50%  {transform: translate(-50%, -10px);scale: 1}
+    100% {transform: translate(-55%, 0px);scale: 0.9}
+}
+
+.shadow {
+    position: absolute;
+    background: #121212;
+    opacity: 0.3;
+    width: 90%;
+    height: 15px;
+    bottom: -50px;
+    left: 50%;
+    border-radius: 50%;
+    animation-name: shade;
+    animation-duration: var(--levSpeed);
+    animation-iteration-count: infinite;
+}
+
+</style>
+
+<div id="game" class="tease_x" >
+
+    {
+        [0,1,2,3,4,5,6,7,8].map(index => <GameField index={"" + index} ></GameField> )
+    }
+
+    <div class="shadow" ></div>
+    
+</div>

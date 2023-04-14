@@ -1,0 +1,23 @@
+
+.flex-row-to-column {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.flex-column-to-row {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+
+@media only screen and (max-width: 768px) {
+    /* CSS rule for small screens */
+    .flex-row-to-column {
+        flex-direction: column;
+    }
+    .flex-column-to-row {
+        flex-direction: row;
+    }
+}

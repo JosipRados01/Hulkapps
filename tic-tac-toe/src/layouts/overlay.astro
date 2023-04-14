@@ -1,0 +1,40 @@
+---
+    const {content} = Astro.params;
+---
+<style>
+
+.overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    min-width: 350px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    background: rgba(18, 18, 18, 0.75);
+    z-index: 1;
+    border-radius: 30px;
+    color: white;
+    transition: 0.3s all;
+}
+
+.overlay.hide {
+    opacity: 0;
+}
+
+@media only screen and (max-width: 1100px) {
+    /* CSS rule for medium-large screens */
+    .overlay {
+        width: 80%;
+    }
+}
+
+</style>
+
+<div class="overlay" >
+    <slot>{content}</slot>
+</div>

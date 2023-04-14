@@ -1,0 +1,21 @@
+.tease_x figure:hover .x, .tease_o figure:hover .o {
+    opacity: 0.5;
+}
+
+#move_played_o .x, #move_played_x .o{
+    opacity: 0;
+}
+#move_played_x .x, #move_played_o .o {
+    opacity: 1;
+}
+
+#move_played_x, #move_played_o {
+    animation-name: boioing;
+    animation-duration: 0.3s;
+}
+
+@keyframes boioing {
+    0%   { rotate: 3deg; scale: 1}
+    50%  { rotate: -3deg; scale: 0.97}
+    100% { rotate: 0deg; scale: 1 }
+}

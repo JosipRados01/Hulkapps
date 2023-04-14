@@ -1,0 +1,51 @@
+---
+import "../styles/shadow-box.css"
+import "../styles/flexes.css"
+import "../styles/global.css"
+
+---
+
+<style>   
+    .skinny {
+        margin: 0;
+        padding: 5px 10px;
+    }
+
+    
+#scoreCounter {
+    position: absolute;
+    right: 2rem;
+    top: 2rem;
+    font-size: 2rem;
+    font-family: Inter,sans-serif;
+    font-weight: 700;
+    padding: 1rem;
+    background: rgba(255, 255, 255);
+    border-radius: 15px;
+
+}
+
+
+@media only screen and (max-width: 768px) {
+    /* CSS rule for small screens */
+    
+    #scoreCounter {
+        left: 50%;
+        transform: translateX(-50%);
+        min-width: 300px;
+    }
+}
+
+</style>
+
+<div id="scoreCounter" class="shadow-box flex-column-to-row">
+    <div class="skinny">
+        <span id="player1Name">Player 1: </span>
+        <span id="player1Score">0</span>
+    </div>
+
+    <div class="skinny" >
+        <span id="player2Name">Player 2: </span>
+        <span id="player2Score">0</span>
+    </div>
+</div>

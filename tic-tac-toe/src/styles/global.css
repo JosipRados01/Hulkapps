@@ -1,0 +1,29 @@
+
+h1 {
+    text-align: center;
+    font-size: 4rem;
+    color: white;
+    text-shadow: black 2px 2px 2px ;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin: 5px;
+}
+
+p, span {
+    font-size: 2rem;
+}
+
+@media only screen and (max-width: 768px) {
+    /* CSS rule for small screens */
+    p, span {
+        font-size: 1.2rem;
+    }
+    h1 {
+        font-size: 3rem;
+    }
+    h2 {
+        font-size: 2rem;
+    }
+}

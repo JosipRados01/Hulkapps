@@ -1,0 +1,61 @@
+---
+import "../styles/global.css"
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="generator" content={Astro.generator} />
+
+		<title>Tic-Tac_Toe</title>
+	</head>
+	<body>
+		<main class="background_green">
+			<slot name="overlay" ></slot>
+			<slot name="scoreCounter" />
+			<slot name="gameBoard" />
+			<slot name="buttons" />
+		</main>
+		
+		<audio id="xSound">
+			<source src="./zvukovi/x.wav" type="audio/mpeg">
+		</audio>
+	
+		<audio id="oSound">
+			<source src="./zvukovi/o.wav" type="audio/mpeg">
+		</audio>
+	
+	</body>
+</html>
+
+<style>
+	
+:root {
+    --levSpeed: 5s;
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 100vh;
+    overflow-y: hidden;
+    transition: 0.6s all;
+    position: relative;
+}
+.background_green {
+    background: lightgreen;
+}
+.background_red {
+    background: crimson;
+}
+
+</style>

@@ -1,0 +1,19 @@
+---
+import "../styles/flexes.css"
+import "../styles/overlayContent.css"
+import Button from "./Button.astro";
+import "../styles/global.css"
+import { swapOverlay } from "../services/TicTacToeService";
+---
+
+
+<h1>Tic-Tac-Toe</h1>
+<p>
+    I'm pretty sure we are all familiar with the game of tic-tac-toe.
+    the rules are simple: two players play against each other each one trying
+    to connect three of their simbols in a row and prevent the other player in doing so
+</p>
+<div class="flex-row-to-column">
+    <Button action={()=> {swapOverlay(1)}} text="Two players" ></Button>
+    <Button action={()=> {swapOverlay(2)}} text="One player" ></Button>
+</div>

@@ -1,0 +1,40 @@
+---
+const {index} = Astro.props
+import "../styles/buttons.css"
+---
+
+<style>
+    figure {
+    aspect-ratio: 1;
+    position: relative;
+    width: calc(0.12 * min(100vw, 100vh));
+    min-width: 50px;
+    margin: 0;
+    background: white;
+}
+
+figure img {
+    position: absolute;
+    width: 95%;
+    aspect-ratio: 1;
+}
+
+figure[data-number="0"] {border-radius: 25px 0 0 0}
+figure[data-number="2"] {border-radius: 0 25px 0 0}
+figure[data-number="6"] {border-radius: 0 0 0 25px}
+figure[data-number="8"] {border-radius: 0 0 25px 0}
+
+
+.x, .o {
+    opacity: 0;
+    transition: 0.3s all;
+}
+
+
+</style>
+
+<figure data-number={index} id="move_played_x
+">
+    <img src="../../public/x.webp" class="x">
+    <img src="../../public/o.webp" class="o">
+</figure>

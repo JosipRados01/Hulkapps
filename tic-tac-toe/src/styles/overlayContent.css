@@ -1,0 +1,11 @@
+input {
+    height: 3rem;
+    border-radius: 15px;
+    font-size: 2rem;
+    width: 100%;
+}
+
+h2 {
+    text-align: center;
+    text-shadow: black 2px 2px 2px ;
+}
